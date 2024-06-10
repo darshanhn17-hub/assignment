@@ -1,0 +1,792 @@
+1.Student Details
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <iomanip>
+using namespace std;
+
+
+int main() {
+    string name;
+    int age;
+    float CGPA;
+    char Grade;
+    
+    cin>>name;
+    cin>>age;
+    cin>>CGPA;
+    cin>>Grade;
+    
+    cout<<"Name: "<< name;
+    cout<<"\nAge: "<< age;
+    cout<<"\nCGPA: "<<floor(CGPA*100)/100<<fixed<<setprecision(2);
+    cout<<"\nGrade: "<<Grade;
+    
+    return 0;
+}
+
+
+2.ASCII Values - I
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    char a;
+    cin>>a;
+    cout<<int(a);
+    return 0;
+}
+
+3.ASCII Values - II
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int a;
+    cin>>a;
+    cout<<char(a);
+    return 0;
+}
+
+4.Round Off
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    float a;
+    cin>>a;
+    cout<<floor(a)<<"\n";
+    cout<<ceil(a)<<"\n";
+    cout<<floor(a)<<"\n";
+    return 0;
+}
+
+5.Fencing the Ground
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int l;
+    int b;
+    cin>>l>>b;
+    cout<<"The required length is "<<2*(l+b)<<" m\n";
+    cout<<"The required area of carpet is "<<l*b<<" sqm";
+    return 0;
+}
+
+
+6.The Newspaper Agency
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int a,b,c;
+    cin>>a>>b>>c;
+    cout<<(a*b)-(a*c)-100;
+    return 0;
+}
+
+
+7.Harry Potter
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    long int a;
+    cin>>a;
+    cout<<(a/1000)+(a%10);
+    return 0;
+}
+
+
+8.Splitting into the teams
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int a,b;
+    cin>>a>>b;
+    
+    cout<<"The number of friends in each team is "<<a/b<<" and left out is "<<a%b;
+    return 0;
+}
+
+
+9.Debt Repay
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <iomanip>
+using namespace std;
+
+
+int main() {
+    float loan;
+    float years;
+    float IPA;
+    
+    cin>>loan;
+    cin>>years;
+    cin>>IPA;
+    
+    
+    
+    cout<<fixed<<setprecision(2);
+    cout<<float(loan/IPA)<<"\n";
+    cout<<float(loan + loan/IPA)<<"\n";
+    cout<<float(0.02*(loan/IPA))<<"\n";
+    cout<<(loan + loan/IPA)-(0.02*(loan/IPA))<<"\n";
+    return 0;
+}
+
+
+10.3 Psychos
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <iomanip>
+using namespace std;
+
+
+int main() {
+    int a,b,c,d;
+    cin>>a>>b>>c>>d;
+    
+    cout<<fixed<<setprecision(1);
+    cout<<"Arun's house is located at("<<float(a+c)/2<<","<<float(b+d)/2<<")";
+    return 0;
+}
+
+
+
+11.Hop n Hop
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int a;
+    int b;
+    cin>>a>>b;
+    
+    cout<<int(pow((pow((a-3),2)+pow((b-4),2)),0.5));
+    return 0;
+}
+
+
+12.Dollars & Cents
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int a1,a2,b1,b2;
+    cin>>a1>>b1>>a2>>b2;
+    
+    int a=int(a1+a2+int((b1+b2)/100));
+    int b=int((b1+b2)%100);
+    
+    cout<<a<<"\n"<<b;
+    return 0;
+}
+
+
+13.Treasure Hunter
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    float x,y,z;
+    cin>>x>>y>>z;
+    int a=int((y/100)*x);
+    int b=int((z/100)*(x-a));
+    int c=int(((x-a)-b)/3);
+    
+    cout<<a<<"\n"<<b<<"\n"<<c;
+    
+    return 0;
+}
+
+
+14.Reverse a 3-digit number
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int num;
+    cin>>num;
+    
+    int first=(num/100);
+    num=num%100;
+    int sec=(num/10);
+    num=num%10;
+    int third=(num%10);
+    num=num%10;
+    
+    cout<< (third*100)+(sec*10)+first;
+     
+    return 0;
+}
+
+
+15. Tic Tac Toe
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int a;
+    cin>>a;
+    cout<<(a-1)/3<<" "<<(a-1)%3;
+    return 0;
+}
+
+
+16.Checking Alphabets
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+int find(char a,char a1[]){
+    for (int i=0;i<5;i++){
+        if(a==a1[i]){
+            return 1;
+        }
+        
+    }
+    return 0;
+}
+
+int main() {
+    char a;
+    cin>>a;
+    char a1[]={'a','e','i','o','u'};
+    
+    if(find(a,a1)){
+        cout<<"Vowel";
+    }
+    else if((a>='A' && a<='Z') || (a>='a' && a<='z') ){
+        cout<<"Consonant";
+    }
+    else{
+        cout<<"Not an alphabet";
+    }
+    
+    
+    return 0;
+}
+
+
+17.Electricity Bill
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int a;
+    cin>>a;
+    if(a<=200){
+        cout<<"Rs."<< int(0.5*a);
+    }
+    else if(a>200 && a<=400){
+        cout<<"Rs."<<int((0.65*a)+100);
+    }
+    else if(a>400 && a<=600){
+        cout<<"Rs."<<int((0.80*a)+200);
+    }
+    else{
+        cout<<"Rs."<<int((1.25*a)+425);
+    }
+    
+    return 0;
+}
+
+
+18.Online shopping
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+void minimum(int f,int s, int a){
+    if(f<=s && f<=a){
+        cout<<"Choose Flipkart";
+    }
+    else if(s<f && s<=a){
+        cout<<"Choose Snapdeal";
+    }
+    else if(a<f && a<s){
+        cout<<"Choose Amazon";
+    }
+}
+
+int main() {
+    float fp,fd,fs,sp,sd,ss,ap,ad,as;
+    cin>>fp>>fd>>fs>>sp>>sd>>ss>>ap>>ad>>as;
+    
+    int f=int((fp-((fd/100)*fp)+fs));
+    int s=int(sp-(sd/100)*sp+ss);
+    int a=int(ap-(ad/100)*ap+as);
+    
+    cout<<"In Flipkart: Rs."<<f<<"\n"<<"In Snapdeal: Rs."<<s<<"\n"<<"In Amazon: Rs."<<a<<"\n";
+    minimum(f,s,a);
+    return 0;
+}
+
+
+19.Hotel Tariff Calculator
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int m;
+    float p,d;
+    cin>>m>>p>>d;
+    if (m<1 || m>12){
+        cout<<"Invalid Input";
+    }
+    else if((m>3&&m<7)||(m==11)||(m==12)){
+        cout<<int((p+(0.20*p))*d);
+    }
+    else{
+        cout<<int(p*d);
+    }
+    return 0;
+}
+
+
+20.Gift for Birthday
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int y;
+    cin>>y;
+    
+    if(y%400==0){
+        cout<<y<<" is a leap year";
+    }
+    else if(y%4==0 && y%100!=0){
+        cout<<y<<" is a leap year";
+    }
+    else{
+        cout<<y<<" is not a leap year";
+    }
+    return 0;
+}
+
+
+21.Trendy number
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int num;
+    cin>>num;
+    int len=int(log10(num)+1);
+    
+    if(len!=3){
+        cout<<"Invalid Number";
+    }
+    else{
+        int mid=((num/10)%10);
+        if(mid%3==0){
+            cout<<"Trendy Number";
+        }
+        else{
+            cout<<"Not a Trendy Number";
+        }
+    }
+    return 0;
+}
+
+
+22.Sum of digit till single digit
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int sod(long long int num){
+    int sum=0;
+    while(num!=0){
+        int digit=num%10;
+        num=num/10;
+        sum=sum+digit;
+    }
+    return sum;
+}
+
+int main() {
+    long long int num;
+    cin>>num;
+    
+    int sum = sod(num);
+    if(sum>9){
+        sum=sod(sum);
+    }
+    
+    cout<<sum;
+    return 0;
+}
+
+
+23.Kaprekar number
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int k;
+    cin>>k;
+    int n=int(log10(k)+1);
+    
+    long int k2=k*k;
+    
+    
+    
+     int sum1;
+     int sum2;
+     sum1=k2/int(pow(10,n));
+     sum2=k2%int(pow(10,n));
+     if(sum1+sum2==k){
+            cout<<"Kaprekar Number";
+     }
+     else{
+        cout<<"Not a Kaprekar Number";
+    }
+    
+    
+    return 0;
+}
+
+
+24.Arrays 1D - Same or Not
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int a;
+    int b;
+    
+    cin>>a;
+    cin>>b;
+    
+    int a1[a];
+    int b1[b];
+    
+    for(int i=0;i<a;i++){
+        cin>>a1[i];
+    }
+    for(int i=0;i<b;i++){
+        cin>>b1[i];
+    }
+    
+    if(a==b){
+        int sum1=0;
+        int sum2=0;
+        for(int i=0;i<a;i++){
+            sum1=sum1+a1[i];
+        }
+        for(int i=0;i<b;i++){
+            sum2+=b1[i];
+        }
+        
+        if(sum1==sum2){
+            cout<<"Same";
+        }
+        else{
+            cout<<"Not Same";
+        }
+        
+    }
+    else{
+        cout<<"Not Same";
+    }
+    
+    
+    return 0;
+}
+
+
+25.Arrays 1D - Sum of even numbers and odd numbers
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int a;
+    cin>>a;
+    
+    int a1[a];
+    
+    for(int i=0;i<a;i++){
+        cin>>a1[i];
+    }
+    
+    int sum1=0;
+    int sum2=0;
+    for(int i=0;i<a;i++){
+        if(a1[i]%2==0){
+            sum1+=a1[i];
+        }
+        else{
+            sum2+=a1[i];
+        }
+    }
+    
+    cout<<"The sum of the even numbers in the array is "<<sum1<<"\n";
+    cout<<"The sum of the odd numbers in the array is "<<sum2<<"\n";
+    return 0;
+}
+
+
+26.Arrays 1D - Ascending order
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int a;
+    cin>>a;
+    int a1[a];
+    
+    for(int i=0;i<a;i++){
+        cin>>a1[i];
+    }
+    
+    for(int i=0;i<a-1;i++){
+        bool sorted=false;
+        for(int j=0;j<a-i-1;j++){
+            if(a1[j]>a1[j+1]){
+                int temp=a1[j];
+                a1[j]=a1[j+1];
+                a1[j+1]=temp;
+                sorted=true;
+            }
+        }
+        if(sorted==false){
+            break;
+        }
+    }
+    cout<<"The Sorted array is:\n";
+    for(int i=0;i<a;i++){
+        cout<<a1[i]<<"\n";
+    }
+    return 0;
+}
+
+
+27.Arrays 1D - Array insertion
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+void read(int size,int a1[]){
+    for(int i=0;i<size;i++){
+        cin>>a1[i];
+    }
+}
+
+int main() {
+    int a;
+    cin>>a;
+    int a1[a+1];
+    read(a,a1);
+    int pos;
+    cin>>pos;
+    if(pos<=0 || pos>a){
+        cout<<"Invalid Input";
+        return 0;
+    }
+    
+    int ele;
+    cin>>ele;
+    
+    for (int i = a-1; i >=pos-1; i--)
+    {
+        a1[i+1] = a1[i];
+    }
+    a1[pos-1] = ele;
+    
+    cout<<"Array after insertion is\n";
+    for(int i=0;i<a+1;i++){
+        cout<<a1[i]<<"\n";
+    }
+    return 0;
+}
+
+
+28.Arrays 2D - Transpose Matrix(in C)
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#define MAX_SIZE 100
+void readMatrix(int num_matrix[][MAX_SIZE],int size){
+    for(int R=0; R < size; R++) {
+        for(int C=0; C < size; C++) {
+            scanf("%d",&num_matrix[R][C]);
+        }
+    }
+}
+void printTranspose(int num_matrix[][MAX_SIZE],int size){
+    for(int R=0; R < size; R++) {
+        for(int C=0; C < size; C++) {
+            printf("%d ",num_matrix[R][C]);
+        }
+        printf("\n");
+    }
+    printf("Transpose matrix is:\n");
+    for(int R=0; R < size; R++) {
+        for(int C=0; C < size; C++) {
+            printf("%d ",num_matrix[C][R]);
+        }
+        printf("\n");
+    }
+}
+int main() {
+    int num_matrix[MAX_SIZE][MAX_SIZE];
+    int size;
+    scanf("%d",&size);
+    readMatrix(num_matrix,size);
+    printTranspose(num_matrix,size);
+    return 0;
+}
+
+
